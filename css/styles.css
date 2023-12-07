@@ -1,0 +1,396 @@
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 750px;
+  position: relative;
+  margin: auto;
+  border-color: #bbb;
+  border-radius: 100px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: black;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+  }
+  
+  .calculator {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+  }
+  .wrapper{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="number"]:focus {
+    border-color: #2ecc71;
+  }
+  
+  label {
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #7f8c8d;
+    pointer-events: none;
+    transition: top 0.3s ease, font-size 0.3s ease;
+  }
+  
+  input[type="number"]:focus + label,
+  input[type="number"]:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #3498db;
+  }
+
+  .submit {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    width: 170px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid #0062ff;
+    background: #fff;
+    color: #230ffb;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+    padding: 10px;
+  }
+ 
+.tabs {
+    border: 3px;
+    border-color: #002f7b;
+    background-color: #0971b7;
+    color: black;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+.btn-halaman {
+  border: 5px;
+  border-color: #00173b;
+  color: black;
+  background-color: #90d2fe;
+  padding: 10px;
+  border-radius: 5px;
+  width: 170px;
+  height: 40px;
+}
+
+.btn-halaman:hover {
+  color: white;
+  background-color: #251b8f;
+}
+
+.tabs:hover {
+  background-color: #0066ab;
+  color: white;
+}
+
+  .halaman {
+    display: none;
+    text-align: center;
+  }
+  
+  .aktif {
+    display: block;
+  }
+  
+.pindah {
+  text-align: center;
+}
+
+  .submit:hover{
+    background: #1d09ff;
+    color: #fff;
+  }
+  
+  .submit span{
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .success{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s;
+  }
+  
+  .success svg{
+    width: 20px;
+    height: 20px;
+    fill: yellowgreen;
+    transform-origin: 50% 50%;
+    transform: translateY(-50%) rotate(0deg) scale(0);
+    transition: all .35s;
+  }
+  
+  button.is_active{
+    width: 40px;
+    height: 40px;
+  }
+  
+  button.is_active .success{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  button.is_active .success svg{
+    margin-top: 50%;
+    transform: translateY(-50%) rotate(720deg) scale(1);
+  }
+  
+  button.is_active span{
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.about-bg:hover {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 300%;
+}
+
+.background-html {
+    background-color: rgb(165, 165, 165);
+}
+
+.img {
+    border-radius: 20px;
+}
+
+.try {
+    text-align: center;
+}
+
+#label {
+
+}
+
+.label {
+  color: black;
+  font: bold;
+}
+
+.kalkulator {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    color: black;
+  }
+  
+  .input-sisi {
+    width: 250px;
+    height: 50px;
+    font-size: 30px;
+  }
+
+input::placeholder {
+    font: 1.25rem/3 'Franklin Gothic Medium';
+}
+
+a.button {
+  border: 3px;
+  border-color: black;
+  background-color: rgb(0, 255, 30);
+  color: rgb(0, 0, 0);
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+a.button:hover {
+  background-color: #06ce4c;
+  color: white;
+}
+
+a.button:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+.try-button {
+  text-align: center;
+
+}

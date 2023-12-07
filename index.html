@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="background-html">
+
+<h1 class="header">KALKULATOR
+  SEGITIGA
+</h1>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://1.bp.blogspot.com/-F8gzDKbNMhY/XzO71YNvIVI/AAAAAAAACik/cc8JkAyc2WAm1Ls81IDPnG7eKwnQlA7awCLcBGAsYHQ/s1280/soal%2Bmenghitung%2Bluas%2Bsegitiga.jpg" class="img" style="width:100%">
+    <div class="text">TRIANGLE CALCULATOR</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://i1.wp.com/saintif.com/wp-content/uploads/2020/07/Rumus-keliling-Segitiga.jpg?fit=1024%2C576&ssl=1" class="img" style="width:100%">
+    <div class="text">KELILING SEGITIGA</div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://i0.wp.com/saintif.com/wp-content/uploads/2020/07/Slide1-9.jpg?w=1280&ssl=1" class="img" style="width:100%">
+    <div class="text">LUAS SEGITIGA</div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  <br>
+  <div class="tabs">
+    <button onclick="tampilkanHalaman('halaman1')" class="btn-halaman">KELILING</button>
+    <button onclick="tampilkanHalaman('halaman2')" class="btn-halaman">LUAS</button>
+    <!-- Tambahkan tombol untuk halaman lain jika diperlukan -->
+  </div>
+
+  <div id="halaman1" class="halaman aktif">
+    <h1 class="header">KELILING SEGITIGA</h1>
+    <p>Ini adalah kalkulator keliling segitiga</p>
+  <div class="kalkulator">
+    <label for="sisiA" class="label">SISI A:</label>
+    <input type="number" class="input-sisi" id="sisiA" placeholder="Masukkan Panjang Sisi A">
+
+    <label for="sisiB" class="label">SISI B:</label>
+    <input type="number" class="input-sisi" id="sisiB" placeholder="Masukkan Panjang Sisi B">
+
+    <label for="sisiC" class="label">SISI C:</label>
+    <input type="number" class="input-sisi" id="sisiC" placeholder="Masukkan Panjang Sisi C">
+   <br>
+   <br>
+   <br>
+   <br>
+    <div class="wrapper">
+      <button onclick="hitungKeliling()" class="submit">
+        <span>HASIL</span>
+        <div class="success">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">
+          
+      <path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
+     </svg>
+          </div>
+      </button>
+      <br>
+      <br>
+      <br>
+      
+      <button onclick="resetForm()" class="submit">
+        <span>RESET</span></button>
+    </div>
+
+    <br>
+    <br>
+    <p id="hasilKeliling">Keliling segitiga: </p>
+    <p id="rumusKeliling"></p>
+    <p id="rumusKeliling2"></p>
+  </div>
+</div>
+  </div>
+
+  <div id="halaman2" class="halaman">
+    <h1 class="header">LUAS SEGITIGA</h1>
+    <p>Ini adalah kalkulator luas segitiga</p>
+  <div class="kalkulator">
+    <label for="base" class="label">ALAS:</label>
+    <input type="number" class="input-sisi" id="base" placeholder="Masukkan Alas...">
+
+    <label for="height" class="label">TINGGI:</label>
+    <input type="number" class="input-sisi" id="height" placeholder="Masukkan Tinggi...">
+<br>
+<br>
+<br>
+<br>
+
+    <div class="wrapper">
+      <button onclick="calculateArea()" class="submit">
+        <span>HASIL</span>
+     </button>
+     </div> 
+<br>
+<br>
+<button onclick="resetForml()" class="submit">
+<span>RESET</span></button>
+    <p id="result">Luas segitiga: </p>
+    <p id="rms"></p>
+    <p id="rms2"></p>
+  </div>
+</div>
+  </div>
+
+
+<script src="JS/index.js"></script>
+</body>
+</html>
